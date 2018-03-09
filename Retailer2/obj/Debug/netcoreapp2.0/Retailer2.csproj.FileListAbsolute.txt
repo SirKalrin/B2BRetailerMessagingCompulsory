@@ -1,0 +1,15 @@
+/Users/mortenhansen/Projects/B2BRetailSystem/Retailer2/bin/Debug/netcoreapp2.0/Retailer2.deps.json
+/Users/mortenhansen/Projects/B2BRetailSystem/Retailer2/bin/Debug/netcoreapp2.0/Retailer2.runtimeconfig.json
+/Users/mortenhansen/Projects/B2BRetailSystem/Retailer2/bin/Debug/netcoreapp2.0/Retailer2.runtimeconfig.dev.json
+/Users/mortenhansen/Projects/B2BRetailSystem/Retailer2/bin/Debug/netcoreapp2.0/Retailer2.dll
+/Users/mortenhansen/Projects/B2BRetailSystem/Retailer2/bin/Debug/netcoreapp2.0/Retailer2.pdb
+/Users/mortenhansen/Projects/B2BRetailSystem/Retailer2/bin/Debug/netcoreapp2.0/Messages2.dll
+/Users/mortenhansen/Projects/B2BRetailSystem/Retailer2/bin/Debug/netcoreapp2.0/Models.dll
+/Users/mortenhansen/Projects/B2BRetailSystem/Retailer2/bin/Debug/netcoreapp2.0/Messages2.pdb
+/Users/mortenhansen/Projects/B2BRetailSystem/Retailer2/bin/Debug/netcoreapp2.0/Models.pdb
+/Users/mortenhansen/Projects/B2BRetailSystem/Retailer2/obj/Debug/netcoreapp2.0/Retailer2.csprojResolveAssemblyReference.cache
+/Users/mortenhansen/Projects/B2BRetailSystem/Retailer2/obj/Debug/netcoreapp2.0/Retailer2.csproj.CoreCompileInputs.cache
+/Users/mortenhansen/Projects/B2BRetailSystem/Retailer2/obj/Debug/netcoreapp2.0/Retailer2.AssemblyInfoInputs.cache
+/Users/mortenhansen/Projects/B2BRetailSystem/Retailer2/obj/Debug/netcoreapp2.0/Retailer2.AssemblyInfo.cs
+/Users/mortenhansen/Projects/B2BRetailSystem/Retailer2/obj/Debug/netcoreapp2.0/Retailer2.dll
+/Users/mortenhansen/Projects/B2BRetailSystem/Retailer2/obj/Debug/netcoreapp2.0/Retailer2.pdb
