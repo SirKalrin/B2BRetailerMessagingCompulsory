@@ -1,17 +1,5 @@
 ﻿<Properties StartupConfiguration="{4F0F09FB-D87B-4BB8-9386-45CB7E9A5FAF}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Retailer2/Program.cs">
-    <Files>
-      <File FileName="Retailer2/Program.cs" Line="41" Column="41" />
-      <File FileName="Messages2/RetailerRequest.cs" Line="8" Column="27" />
-      <File FileName="Messages2/WarehouseReply.cs" Line="13" Column="1" />
-      <File FileName="Messages2/RetailerReply.cs" Line="10" Column="6" />
-      <File FileName="Customer2/Program.cs" Line="20" Column="31" />
-      <File FileName="Messages2/CustomerRequest.cs" Line="17" Column="17" />
-      <File FileName="Models/Order.cs" Line="14" Column="10" />
-      <File FileName="Warehouse2/Program.cs" Line="30" Column="67" />
-      <File FileName="Warehouse2/WarehouseProgram.cs" Line="1" Column="1" />
-    </Files>
-  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench />
   <MonoDevelop.Ide.ItemProperties.Customer2 PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug|x86" />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

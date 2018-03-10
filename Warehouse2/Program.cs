@@ -27,7 +27,8 @@ namespace Warehouse
             using (var bus = RabbitHutch.CreateBus("host=localhost"))
             {
                 this.bus = bus;
-                bus.Subscribe<RetailerRequest>("retailer.warehouse." + id, HandleRetailerRequest, x => x.WithTopic(country.ToString()).WithTopic("retailer.warehouses"));
+                bus.Subscribe<RetailerRequest>("retailer.warehouse." + id, HandleRetailerRequest, x => x.WithTopic("retailer.warehouses." + country.ToString()).WithTopic("retailer.warehouses"));
+                Console.ReadLine();
             }
         }
 
@@ -36,7 +37,8 @@ namespace Warehouse
             WarehouseProgram.RecieveMessage(id, request.Order.ProductIds[0], country.ToString());
             WarehouseReply reply = new WarehouseReply() { Order = request.Order };
 
-            if (products.FirstOrDefault(x => x.ProductId == request.Order.ProductIds[0]).ItemsInStock > 0)
+            Product p = products.FirstOrDefault(x => x.ProductId == request.Order.ProductIds[0]);
+            if (p != null && p.ItemsInStock > 0)
             {
                 reply.Order.IsAvailable = true;
                 if (request.Order.CountryCode.Equals(country))
@@ -52,10 +54,8 @@ namespace Warehouse
             }
             else
                 reply.Order.IsAvailable = false;
-
             bus.Send<WarehouseReply>("warehouse.retailer", reply);
             WarehouseProgram.SendMessage(id, reply.Order.IsAvailable);
-
         }
     }
 }

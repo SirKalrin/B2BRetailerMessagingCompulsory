@@ -13,33 +13,27 @@ namespace Customer
             Console.WriteLine("Enter a unique client id:");
             int id;
             int.TryParse(Console.ReadLine(), out id);
-            Console.WriteLine("Enter a country code:");
+            Console.WriteLine($"Enter your country code ({CountryCode.DK}, {CountryCode.DE}, {CountryCode.EN}, {CountryCode.FR}, {CountryCode.US} :");
             CountryCode cc;
             Enum.TryParse(Console.ReadLine(), out cc);
-            Console.WriteLine("<--Welcome dear customer!-->\nPlease enter the ID of a product you desire: (type 'Quit' to exit)");
+            Console.WriteLine($"<--Welcome dear customer from {cc}!-->\nPlease enter the ID of a product you desire: (type 'Quit' to exit)");
             string input = "";
             while (true)
             {
                 using (var bus = RabbitHutch.CreateBus("host=localhost"))
                 {
                     input = Console.ReadLine();
-                    if (input.ToLower() == "quit") {
+                    if (input.ToLower() == "quit")
+                    {
                         break;
                     }
                     int productId;
-                    try
-                    {
-                        int.TryParse(input, out productId);
-                        CustomerRequest req = new CustomerRequest { CustomerId = id, CountryCode = CountryCode.DK, ProductId = productId };
-                        bus.Send<CustomerRequest>("client.retailer", req);
-                        bus.Receive<RetailerReply>($"retailer.client.{id}", response => HandleRetailerResponse(response));
-                        Console.WriteLine("The query for your desired product has been sent.");
-                        Console.ReadLine();
-                    }
-                    catch (Exception)
-                    {
-                        Console.WriteLine("The query enters could not be intepreted as an integer. Insert numeric value to order...");
-                    }
+                    int.TryParse(input, out productId);
+                    CustomerRequest req = new CustomerRequest { CustomerId = id, CountryCode = cc, ProductId = productId };
+                    bus.Send<CustomerRequest>("client.retailer", req);
+                    bus.Receive<RetailerReply>($"retailer.client.{id}", response => HandleRetailerResponse(response));
+                    Console.WriteLine("The query for your desired product has been sent.");
+                    Console.ReadLine();
                 }
             }
         }
